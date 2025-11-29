@@ -1,0 +1,59 @@
+<%- include('partials/head') %>
+<body>
+
+<%- include('partials/nav') %>
+
+<main class="page page-create">
+  <section class="create-card">
+    <header class="create-header">
+      <h1>Create a new blog</h1>
+      <p>Share your ideas with a clean, minimal editor.</p>
+    </header>
+
+    <form action="/blogs" method="POST" class="create-form">
+      <div class="form-row">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Give your post a catchy title"
+          required
+        >
+      </div>
+
+      <div class="form-row">
+        <label for="snippet">Short summary</label>
+        <input
+          type="text"
+          id="snippet"
+          name="snippet"
+          placeholder="One-line teaser for your blog"
+          required
+        >
+      </div>
+
+      <div class="form-row">
+        <label for="body">Content</label>
+        <textarea
+          id="body"
+          name="body"
+          rows="10"
+          placeholder="Start writing your story..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">
+          Publish blog
+        </button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+
+</body>
+</html>
